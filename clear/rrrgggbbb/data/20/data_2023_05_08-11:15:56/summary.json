@@ -1,0 +1,14 @@
+{
+   "max_pressure": 4.0,
+   "N": 30,
+   "start_from": 2,
+   "save_every_sec": 0.005,
+   "gel": "clear",
+   "leds": "rrrgggbbb",
+   "up_to": 9,
+   "indenter": "20",
+   "max_press_time": 10.0,
+   "save": true,
+   "method": "press",
+   "sensor_id": 3
+}
