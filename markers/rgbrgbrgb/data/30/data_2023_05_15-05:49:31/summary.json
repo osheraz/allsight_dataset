@@ -1,0 +1,14 @@
+{
+   "max_pressure": 4.0,
+   "N": 5,
+   "sensor_id": 8,
+   "start_from": 8,
+   "save_every_sec": 0.003,
+   "gel": "markers",
+   "leds": "rgbrgbrgb",
+   "up_to": 12,
+   "indenter": "30",
+   "max_press_time": 7.0,
+   "save": true,
+   "method": "tip_press"
+}
