@@ -1,0 +1,17 @@
+{
+   "max_pressure": 2.0,
+   "leds": "rrrgggbbb",
+   "N": 30,
+   "save_every_sec_rotate": 0.1,
+   "start_from": 2,
+   "max_rotation_time": 10.0,
+   "save_every_sec": 0.005,
+   "rot_a": 15.0,
+   "up_to": 9,
+   "method": "yaw",
+   "indenter": "sphere3",
+   "max_press_time": 7.0,
+   "save": true,
+   "max_pressure_rotate": 20.0,
+   "sensor_id": 2
+}

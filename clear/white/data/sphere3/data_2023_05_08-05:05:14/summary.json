@@ -1,0 +1,14 @@
+{
+   "max_pressure": 4.0,
+   "N": 30,
+   "start_from": 8,
+   "save_every_sec": 0.003,
+   "gel": "clear",
+   "leds": "white",
+   "up_to": 12,
+   "indenter": "sphere3",
+   "max_press_time": 7.0,
+   "save": true,
+   "method": "tip_press",
+   "sensor_id": 4
+}
