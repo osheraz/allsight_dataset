@@ -1,11 +1,11 @@
 # **AllSight**-dataset
 
-The AllSight ataset comprises of [AllSight](https://github.com/osheraz/allsight) contact interactions.
-We envision this can contribute towards efforts in tactile in-hand manipulations.
+The AllSight dataset comprises of [AllSight](https://github.com/osheraz/allsight) contact interactions.
+We believe that this dataset has the potential to contribute to advancements in tactile in-hand manipulations.
 
-We provide access to AllSight images, contact pixels and poses, contact forces,
+We provide access to AllSight images, contact pixels & poses, contact forces,
 contact torques, and penetration depth.
-This dataset is supplementary to the [AllSight paper](edit link) submission. 
+This dataset is supplementary to the [AllSight paper](https://arxiv.org/abs/2307.02928) submission. 
 
 ## Getting started: **Code**
 
@@ -45,4 +45,3 @@ cd allsight_dataset
 - [transform_data.py](transform_data.py): transformation pre-processing scripts.
 - [annotate_data.py](annotate_data.py): annotations pre-processing scripts.
 -
-### License
