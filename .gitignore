@@ -1,0 +1,9 @@
+*.a
+*.so
+*.o
+*.swp
+*.pyc
+*.pkl
+*.pickle
+*.p
+__pycache__/
