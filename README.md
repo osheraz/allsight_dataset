@@ -7,6 +7,11 @@ We provide access to AllSight images, contact pixels & poses, contact forces,
 contact torques, and penetration depth.
 This dataset is supplementary to the [AllSight paper](https://arxiv.org/abs/2307.02928) submission. 
 
+<div align="center">
+  <img src=".github/collect.gif"
+  width="80%">
+</div>
+
 ## Getting started: **Code**
 
 ## Folder structure
