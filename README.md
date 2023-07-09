@@ -14,6 +14,12 @@ During contact, an image is taken along with a state measurement (contact positi
   width="80%">
 </div>
 
+### Clone this dataset
+```bash
+git clone https://github.com/osheraz/allsight_dataset
+cd allsight_dataset
+```
+
 ## Folder structure
 ```bash
 allsight_dataset
@@ -37,14 +43,32 @@ allsight_dataset
            
 ```
 
-## Getting started:
+## Dataset details:
 
-### Clone this dataset
+Each data collection session has 2 `.json` files that describe its content.
 ```bash
-git clone https://github.com/osheraz/allsight_dataset
-cd allsight_dataset
+data_xx_transformed_annotated.json   # gt labels
+summary.json                         # session summary
 ```
 
+- `data_xx_transformed_annotated.json` can be load using `df_data = pd.read_json(JSON_FILE).transpose()` and has the following structure (some keys are not only used for pre-processing:
+
+    |                      |  ref_frame|    time |   frame |  depth | pose_transformed   | ft_transformed | ft_ee_transformed | contact_px  | annotated  |
+    |:---------------------|:----------|:--------|:--------|:-------|:-------------------|:---------------|:--------------------|:--------|:--------|
+    | `image_name.jpg`       | `ref_path`  | `t`       | `img_path`|     `d`  | `[xyz, rot]`         | `fx, fy ,fz, mx, my, mz` | `fx, fy ,fz, mx, my, mz`  | `px, py, r` | `False` |
+    
+    ```bash
+    time                  # time since start of press
+    ref_frame             # ref_frame at start of press
+    frame                 # contact frame
+    pose_transformed      # contact position
+    ft_transformed        # contact force w.r.t origin
+    ft_ee_transformed     # contact force w.r.t normal
+    depth                 # penetration depth
+    contact_px            # contact pixels 
+    annotated             # flag indicating annotation
+    ```
+  
 ### Usage
 
 - [display_data.py](display_data.py): visualize dataset.
