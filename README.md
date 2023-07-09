@@ -40,7 +40,8 @@ allsight_dataset
                     ├── image_00.png
                     ├── ....png   
             ├── ...   
-           
+├── clear  
+    ├── ...                
 ```
 
 ## Dataset details:
