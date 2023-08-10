@@ -20,26 +20,25 @@ origin, xaxis, yaxis, zaxis = (0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1)
 
 # change depend on the data you use
 pc_name = os.getlogin()
-gel = 'markers'
-leds = 'rrrgggbbb'  # 'rgbrgbrgb
-
+gel = 'clear'
+leds = 'white'
 # Specific buffer
-indenter = 'sphere4'
-data_name = 'data_2023_07_04-07:28:31'
-JSON_FILE = f"{os.path.dirname(__file__)}/{gel}/{leds}/data/{indenter}/{data_name}/{data_name}.json"
-buffer_paths = [JSON_FILE]
+# indenter = 'sphere4'
+# data_name = 'data_2023_07_04-07:28:31'
+# JSON_FILE = f"{os.path.dirname(__file__)}/{gel}/{leds}/data/{indenter}/{data_name}/{data_name}.json"
+# buffer_paths = [JSON_FILE]
 
 # Multiple buffer
-# indenter = ['sphere3', 'sphere4', 'sphere5']
-# paths = [f"{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}" for ind in indenter]
-# buffer_paths = []
-# for p in paths:
-#     buffer_paths += [y for x in os.walk(p) for y in glob(os.path.join(x[0], '*.json'))]
+indenter = ['sphere3', 'square', 'ellipse', 'hexagon']
+paths = [f"{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}" for ind in indenter]
+buffer_paths = []
+for p in paths:
+    buffer_paths += [y for x in os.walk(p) for y in glob(os.path.join(x[0], '*.json'))]
 
-# buffer_paths = [p for p in buffer_paths if ('transformed' not in p) and
-#                                            ('final' not in p) and
-#                                            ('summary' not in p)
-#                 ]
+buffer_paths = [p for p in buffer_paths if ('transformed' not in p) and
+                                           ('final' not in p) and
+                                           ('summary' not in p)
+                ]
 
 
 j_i = 0

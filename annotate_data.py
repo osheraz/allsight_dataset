@@ -115,9 +115,9 @@ if __name__ == "__main__":
     new_annotate = True
     save = False
 
-    indenter = 'sphere4'
-    leds = 'rrrgggbbb'
-    gel = 'markers'
+    indenter = 'sphere3'
+    leds = 'white'
+    gel = 'clear'
     date_name = '2023_07_04-07:28:31'
 
     js_name = 'data_' + date_name
@@ -128,13 +128,13 @@ if __name__ == "__main__":
     images_path = data_path + f"images/{indenter}/{img_name}/"
     buffer_paths = [JSON_FILE]
 
-    # from glob import glob
+    from glob import glob
     #
-    # indenter = ['sphere4']
-    # paths = [f'{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}' for ind in indenter]
-    # buffer_paths = []
-    # for p in paths:
-    #     buffer_paths += [y for x in os.walk(p) for y in glob(os.path.join(x[0], '*_transformed.json'))]
+    indenter = ['hexagon', 'square', 'ellipse']
+    paths = [f'{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}' for ind in indenter]
+    buffer_paths = []
+    for p in paths:
+        buffer_paths += [y for x in os.walk(p) for y in glob(os.path.join(x[0], '*_transformed.json'))]
 
     for JSON_FILE in buffer_paths:
 
@@ -144,7 +144,7 @@ if __name__ == "__main__":
         indenter = summary['indenter']
         sensor_id = summary['sensor_id']
 
-        if sensor_id != 11: continue
+        if sensor_id != 12: continue
 
         df_data = pd.read_json(JSON_FILE).transpose()
 
