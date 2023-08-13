@@ -124,13 +124,14 @@ if __name__ == "__main__":
     img_name = 'img_' + date_name
     pc_name = os.getlogin()
     data_path = f'{os.path.dirname(__file__)}/{gel}/{leds}/'
-    JSON_FILE = data_path + f"data/{indenter}/{js_name}/{js_name}_transformed.json"
-    images_path = data_path + f"images/{indenter}/{img_name}/"
-    buffer_paths = [JSON_FILE]
+
+    # JSON_FILE = data_path + f"data/{indenter}/{js_name}/{js_name}_transformed.json"
+    # images_path = data_path + f"images/{indenter}/{img_name}/"
+    # buffer_paths = [JSON_FILE]
 
     from glob import glob
     #
-    indenter = ['hexagon', 'square', 'ellipse']
+    indenter = ['hexagon', 'square', 'ellipse', 'sphere3']
     paths = [f'{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}' for ind in indenter]
     buffer_paths = []
     for p in paths:
@@ -144,7 +145,7 @@ if __name__ == "__main__":
         indenter = summary['indenter']
         sensor_id = summary['sensor_id']
 
-        if sensor_id != 12: continue
+        if sensor_id != 16: continue
 
         df_data = pd.read_json(JSON_FILE).transpose()
 

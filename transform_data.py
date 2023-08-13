@@ -42,6 +42,7 @@ buffer_paths = [p for p in buffer_paths if ('transformed' not in p) and
 
 
 j_i = 0
+
 for JSON_FILE in buffer_paths:
 
     j_i += 1
