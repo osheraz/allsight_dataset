@@ -113,7 +113,7 @@ if __name__ == "__main__":
 
     # define the image size, should be consistent with the raw data size
     new_annotate = True
-    save = False
+    save = True
 
     indenter = 'sphere3'
     leds = 'white'
@@ -145,7 +145,7 @@ if __name__ == "__main__":
         indenter = summary['indenter']
         sensor_id = summary['sensor_id']
 
-        if sensor_id != 15: continue
+        if sensor_id != 13: continue
 
         df_data = pd.read_json(JSON_FILE).transpose()
 
