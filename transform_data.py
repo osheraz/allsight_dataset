@@ -46,6 +46,13 @@ j_i = 0
 for JSON_FILE in buffer_paths:
 
     j_i += 1
+
+    with open('/'.join(JSON_FILE.split('/')[:-1]) + "/summary.json", 'rb') as handle:
+        summary = json.load(handle)
+
+    sensor_id = summary['sensor_id']
+    if sensor_id != 15: continue
+
     print(f'transforming dataset: {JSON_FILE[-58:]} \t {j_i}/{len(buffer_paths)}')
 
     df_data = pd.read_json(JSON_FILE).transpose()
