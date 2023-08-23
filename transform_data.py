@@ -29,7 +29,7 @@ leds = 'white'
 # buffer_paths = [JSON_FILE]
 
 # Multiple buffer
-indenter = ['sphere3', 'square', 'ellipse', 'hexagon']
+indenter = ['sphere3'] # , 'square', 'ellipse', 'hexagon'
 paths = [f"{os.path.dirname(__file__)}/{gel}/{leds}/data/{ind}" for ind in indenter]
 buffer_paths = []
 for p in paths:
@@ -51,7 +51,7 @@ for JSON_FILE in buffer_paths:
         summary = json.load(handle)
 
     sensor_id = summary['sensor_id']
-    if sensor_id != 15: continue
+    if sensor_id != 19: continue
 
     print(f'transforming dataset: {JSON_FILE[-58:]} \t {j_i}/{len(buffer_paths)}')
 

@@ -145,7 +145,7 @@ if __name__ == "__main__":
         indenter = summary['indenter']
         sensor_id = summary['sensor_id']
 
-        if sensor_id != 13: continue
+        if sensor_id != 19: continue
 
         df_data = pd.read_json(JSON_FILE).transpose()
 
