@@ -69,10 +69,19 @@ summary.json                         # session summary
     contact_px            # contact pixels 
     annotated             # flag indicating annotation
     ```
-  
-### Usage
 
+#### For convenient, each collection session also include a visual description of the collected data
+<p align="center">
+  <img alt="Light" src="https://github.com/osheraz/allsight_dataset/blob/main/markers/rrrgggbbb/data/sphere3/data_2023_04_24-05:39:51/data_2023_04_24-05:39:51_transform_pose_ee.png?raw=true" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="https://github.com/osheraz/allsight_dataset/blob/main/markers/rrrgggbbb/data/sphere3/data_2023_04_27-10:22:37/data_2023_04_27-10:22:37_transform_pose.png?raw=true" width="45%">
+</p>
+
+### Data preprocessing for new raw data
+(steps documentation are within the code)
+- [transform_data.py](transform_data.py): FT transformation script from ee wrist to sensor surface.
+- [annotate_data.py](annotate_data.py): contact pixel annotations script.
+
+### Usage
 - [display_data.py](display_data.py): visualize dataset.
-- [transform_data.py](transform_data.py): transformation pre-processing scripts.
-- [annotate_data.py](annotate_data.py): annotations pre-processing scripts.
--
+
